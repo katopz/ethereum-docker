@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "up": "docker-compose up -d && docker ps",
+    "down": "docker-compose down",
+    "kill": "docker-compose kill",
+    "geth": "docker exec -it $(docker ps -a -q --filter ancestor=ethereumdocker_eth) geth",
+    "in": "docker exec -it $(docker ps -a -q --filter ancestor=ethereumdocker_eth) /bin/sh 2>/dev/null",
+    "ls": "npm run geth -- account list",
+    "ls-dev": "npm run geth -- --dev account list",
+    "new": "npm run geth -- account new",
+    "new-testnet": "npm run geth -- --testnet account new",
+    "new-dev": "npm run geth -- --dev account new",
+    "console": "npm run geth -- console",
+    "console-testnet": "npm run geth -- --testnet console --port 0 --fast --cache 512",
+    "console-dev": "npm run geth -- --datadir ./.ethereum/devnet --dev console",
+    "mine": "npm run geth -- --mine --minerthreads 2 --etherbase 0",
+    "mine-testnet": "npm run geth -- --testnet --mine --minerthreads 2 --etherbase 0",
+    "mine-dev": "npm run geth -- --datadir ./.ethereum/devnet --dev --mine --minerthreads 2 --etherbase 0",
+    "attach": "npm run geth -- attach ipc://root/.ethereum/devchain/geth.ipc",
+    "exec": "npm run geth -- attach ipc://root/.ethereum/devchain/geth.ipc --exec"
+  }
+}

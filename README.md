@@ -1,3 +1,5 @@
+
+- - -
 # Ethereum Docker
 
 Get started creating Ethereum development and test single and multi-node clusters
@@ -93,3 +95,55 @@ To speed up the process, you can use a pre-generated DAG. All you need to do is 
 ADD dag/full-R23-0000000000000000 /root/.ethash/full-R23-0000000000000000
 ```
 to the monitored-geth-client Dockerfile.
+
+## Extras
+Do everything with `NPM`
+#### To run ethereum
+```shell
+npm run up
+```
+#### To open netstats
+```shell
+open http://localhost:3000
+```
+#### To create new account on Main network
+```shell
+npm run new
+```
+#### To run ethereum
+```shell
+npm run up
+```
+
+## Create new accounts
+#### To create new account on Main network
+```shell
+npm run new
+```
+#### To create new account on testnet network
+```shell
+npm run new-testnet
+```
+#### To create new account on Dev network
+```shell
+npm run new-dev
+```
+
+## Mining
+```shell
+npm run mine-dev
+```
+
+## Develop
+#### To get in console
+```shell
+npm run console-dev
+```
+#### To get balance
+```shell
+npm run exec -- 'eth.getBalance( eth.accounts[0] )'
+```
+#### To run external javascript file
+```shell
+npm run exec -- 'loadScript("/src/helloworld.js")'
+```
