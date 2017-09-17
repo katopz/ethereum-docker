@@ -97,7 +97,7 @@ ADD dag/full-R23-0000000000000000 /root/.ethash/full-R23-0000000000000000
 to the monitored-geth-client Dockerfile.
 
 ## Extras
-Do everything with `NPM`
+Do everything with `npm`
 #### To run ethereum
 ```shell
 npm run up
@@ -106,38 +106,61 @@ npm run up
 ```shell
 open http://localhost:3000
 ```
-#### To create new account on Main network
+#### To turn off ethereum
 ```shell
-npm run new
+npm run down
 ```
-#### To run ethereum
+## Create new accounts
 ```shell
-npm run up
+# On Main network
+npm run new
+
+# On testnet network
+npm run new-testnet
+
+# On Dev network
+npm run new-dev
 ```
 
-## Create new accounts
-#### To create new account on Main network
+## List accounts
 ```shell
-npm run new
-```
-#### To create new account on testnet network
-```shell
-npm run new-testnet
-```
-#### To create new account on Dev network
-```shell
-npm run new-dev
+# On Main network
+npm run ls
+
+# On testnet network
+npm run ls-testnet
+
+# On Dev network
+npm run ls-dev
 ```
 
 ## Mining
 ```shell
+# On Main network
+npm run mine
+
+# On testnet network
+npm run mine-testnet
+
+# On Dev network
 npm run mine-dev
 ```
 
 ## Develop
 #### To get in console
 ```shell
+# On Main network
+npm run console
+
+# On testnet network
+npm run console-testnet
+
+# On Dev network
 npm run console-dev
+```
+#### To attach
+```shell
+npm run attach
 ```
 #### To get balance
 ```shell

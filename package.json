@@ -6,6 +6,7 @@
     "geth": "docker exec -it $(docker ps -a -q --filter name=ethereumdocker_eth) geth",
     "in": "docker exec -it $(docker ps -a -q --filter name=ethereumdocker_eth) /bin/sh 2>/dev/null",
     "ls": "npm run geth -- account list",
+    "ls-testnet": "npm run geth -- --testnet account list",
     "ls-dev": "npm run geth -- --dev account list",
     "new": "npm run geth -- account new",
     "new-testnet": "npm run geth -- --testnet account new",
