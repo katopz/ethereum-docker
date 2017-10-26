@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "up": "docker-compose up -d && docker ps",
-    "down": "docker-compose down",
+    "up": "docker-compose -f docker-compose.local.yml up -d && docker ps",
+    "down": "docker-compose -f docker-compose.local.yml down",
     "kill": "docker-compose kill",
     "geth": "docker exec -it $(docker ps -a -q --filter name=ethereumdocker_eth) geth",
     "in": "docker exec -it $(docker ps -a -q --filter name=ethereumdocker_eth) /bin/sh 2>/dev/null",
