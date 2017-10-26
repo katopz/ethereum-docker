@@ -18,6 +18,7 @@
     "mine-testnet": "npm run geth -- --testnet --mine --minerthreads 2 --etherbase 0",
     "mine-dev": "npm run geth -- --datadir ./.ethereum/devnet --dev --mine --minerthreads 2 --etherbase 0",
     "attach": "npm run geth -- attach ipc://root/.ethereum/devchain/geth.ipc",
-    "exec": "npm run geth -- attach ipc://root/.ethereum/devchain/geth.ipc --exec"
+    "exec": "npm run geth -- attach ipc://root/.ethereum/devchain/geth.ipc --exec",
+    "load": "npm run exec -- 'loadScript(\"$JS\")'"
   }
 }

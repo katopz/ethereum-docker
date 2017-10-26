@@ -170,5 +170,9 @@ npm run exec -- 'eth.getBalance( eth.accounts[0] )'
 ```
 #### To run external javascript file
 ```shell
+# Use loadScript
 npm run exec -- 'loadScript("/src/helloworld.js")'
+
+# Or just load
+JS=./src/helloworld.js npm run load
 ```
