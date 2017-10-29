@@ -17,6 +17,7 @@
     "mine": "npm run geth -- --mine --minerthreads 2 --etherbase 0",
     "mine-testnet": "npm run geth -- --testnet --mine --minerthreads 2 --etherbase 0",
     "mine-dev": "npm run geth -- --datadir ./.ethereum/devnet --dev --mine --minerthreads 2 --etherbase 0",
+    "balance": "ID=${ID:-0} npm run exec -- 'eth.getBalance( eth.accounts[$ID] )'",
     "attach": "npm run geth -- attach ipc://root/.ethereum/devchain/geth.ipc",
     "exec": "npm run geth -- attach ipc://root/.ethereum/devchain/geth.ipc --exec",
     "load": "npm run exec -- 'loadScript(\"$JS\")'"

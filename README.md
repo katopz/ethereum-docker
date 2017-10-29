@@ -166,7 +166,17 @@ npm run attach
 ```
 #### To get balance
 ```shell
+# For account ID=0 you can just
+npm run balance
+
+# Or by run script directly
 npm run exec -- 'eth.getBalance( eth.accounts[0] )'
+
+# Or use variable ID=0
+ID=0 npm run balance
+
+# And for ID=1
+ID=1 npm run balance
 ```
 #### To run external javascript file
 ```shell
