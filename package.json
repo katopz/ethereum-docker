@@ -24,7 +24,7 @@
     "unlock": "ID=${ID:-0} npm run exec -- 'personal.unlockAccount( personal.listAccounts[$ID], \"\" )'",
     "send": "npm run exec -- 'eth.sendTransaction({from:eth.accounts[$FROM], to:eth.accounts[$TO], value: web3.toWei($VALUE, \"ether\")})'",
     "_ls": "npm run exec -- personal.listAccounts",
-    "_new": "npm run exec -- 'personal.newAccount()",
+    "_new": "npm run exec -- 'personal.newAccount()'",
     "_unlock": "npm run exec -- 'personal.unlockAccount( eth.coinbase, \"\" )'",
     "_send": "npm run _unlock && npm run exec -- 'personal.sendTransaction({from:eth.coinbase, to:eth.accounts[$TO], value: web3.toWei($VALUE, \"ether\")})'",
     "_balance": "npm run exec -- 'eth.getBalance( eth.coinbase )'",
