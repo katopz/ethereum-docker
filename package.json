@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "prod": "docker-compose -f docker-compose.prod.yml up -d && docker ps",
     "up": "docker-compose -f docker-compose.local.yml up -d && docker ps",
     "down": "docker-compose -f docker-compose.local.yml down",
     "kill": "docker-compose kill",
@@ -14,8 +15,8 @@
     "new": "npm run geth -- account new",
     "new-testnet": "npm run geth -- --testnet account new",
     "new-dev": "npm run geth -- --dev  --datadir /root/.ethereum/devchain account new",
-    "console": "npm run geth -- console",
-    "console-testnet": "npm run geth -- --testnet console --port 0 --fast --cache 512",
+    "console": "npm run geth -- --fast --cache=512 console",
+    "console-testnet": "npm run geth -- --testnet --port 0 --fast --cache 512 console",
     "console-dev": "npm run geth -- --dev console",
     "mine": "npm run geth -- --mine --minerthreads 2 --etherbase 0",
     "mine-testnet": "npm run geth -- --testnet --mine --minerthreads 2 --etherbase 0",
